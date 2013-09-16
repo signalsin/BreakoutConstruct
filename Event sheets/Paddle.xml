@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Paddle</name>
+    <events>
+        <event-block any="1" sid="6616858437231094">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="4233236851984562" type="Touch" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="9670653861860217">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9525630743675876" type="System">
+                            <param id="0" name="First value">Paddle.X</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">Touch.X + (300 * dt)</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="6783596793127766" type="System">
+                            <param id="0" name="First value">Paddle.X </param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">Touch.X - (300 * dt)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="9048417817412986" type="Paddle">
+                            <param id="0" name="Angle">angle(Paddle.X, Paddle.Y, Touch.X, Paddle.Y)</param>
+                            <param id="1" name="Distance">(300 * dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

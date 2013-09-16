@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Ball</name>
+    <events>
+        <event-block sid="6556499826955374">
+            <conditions>
+                <condition id="-18" name="On created" sid="1534946474741997" type="Ball" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6697995784226133" type="Ball">
+                    <param id="0" name="Angle">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9034628990636537">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1786564959094482" type="Ball">
+                    <param id="0" name="Object">Paddle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8672741184769927" type="Ball">
+                    <param id="0" name="Angle">270 + 75 * (Ball.X - Paddle.X)  / (Paddle.Width / 2)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

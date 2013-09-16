@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameScreen</name>
+    <events>
+        <include>Paddle</include>
+        <include>Ball</include>
+        <event-block sid="6970178256808187">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7636934465173202" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
