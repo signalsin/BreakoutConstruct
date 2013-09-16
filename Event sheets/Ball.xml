@@ -25,5 +25,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="9642413240762597">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9466686212997836" type="Ball">
+                    <param id="0" name="Object">Brick</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1689366469073331" type="Brick" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
